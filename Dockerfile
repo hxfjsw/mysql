@@ -7,6 +7,7 @@ RUN yum -y install bison l libxml2 libxml2-devel libcurl libcurl-devel openjpeg 
 
 RUN wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 RUN rpm -ivh mysql-community-release-el7-5.noarch.rpm
+RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-mysql
 RUN yum -y install mysql-server
 
 
